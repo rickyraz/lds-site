@@ -6,14 +6,14 @@ import { RouterProvider } from "@tanstack/react-router";
 const queryClient = new QueryClient();
 
 function QueryRouterApp() {
-	return (
-		<>
-			<QueryClientProvider client={queryClient}>
-				<RouterProvider router={routeClient} />
-				<ReactQueryDevtools initialIsOpen position="right" />
-			</QueryClientProvider>
-		</>
-	);
+  return (
+    <>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={routeClient} />
+        <ReactQueryDevtools initialIsOpen position="right" />
+      </QueryClientProvider>
+    </>
+  );
 }
 
 export default QueryRouterApp;
