@@ -1,27 +1,51 @@
 import Home from "./images/home.png";
+import { useRef, useEffect } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { FreeMode, Autoplay, Pagination, Navigation } from "swiper/modules";
 
 function Hero() {
-	return (
-		<section className=" pt-24 bg-[#161D27] ">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-center font-bold text-4xl text-[#4C90FF]">
-					ISP Billing & Network Management System
-				</h1>
-				<p className="text-center  text-sm mt-4 text-white">
-					We help local ISPs succeed in a competitive market and build a
-					profitable, fast-growing business
-				</p>
-				<div className="relative -bottom-14 ">
-					<img
-						className="object-cover w-full max-h-[500px] rounded-2xl shadow-sm  shadow-[#232b42]/10"
-						// src="./images/home.png"
-						src={Home}
-						alt="Volcano"
-					/>
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section className=" bg-[#FEFEFE] h-[445px]">
+      <Swiper
+        rewind={true}
+        slidesPerView={1}
+        // slidesPerView={3}
+        spaceBetween={55}
+        // freeMode={true}
+        centeredSlides={true}
+        navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        // modules={[FreeMode, Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper "
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </section>
+  );
 }
 
 export default Hero;

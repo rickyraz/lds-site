@@ -1,15 +1,15 @@
-import Header from "@/components/main/Header";
 import { type ReactNode } from "react";
-import Footer from "./main/Footer";
+import Header from "./Main/Header";
+import Footer from "./Main/Footer";
 
 function Layout({ children }: { children: ReactNode }) {
-	return (
-		<div>
-			<Header />
-			{children}
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="font-axiforma">
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
 }
 
 export default Layout;

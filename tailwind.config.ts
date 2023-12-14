@@ -14,6 +14,13 @@ const config = {
     // Path to the Tremor module
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        axiforma: ["Axiforma", "sans-serif"],
+      },
+    },
+  },
 } satisfies Config;
 
 export default config;

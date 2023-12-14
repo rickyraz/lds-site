@@ -1,20 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import LogoWide from "./logo/logo-wide.png";
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
+import Logo from "./logo/logo.png";
 
 import {
   Cloud,
@@ -51,21 +37,24 @@ import {
 
 function Header() {
   return (
-    <header className="text-sm py-8 bg-[#FAFAFA]">
+    <header className="text-sm py-8 bg-[#FEFEFE] mx-5 md:mx-0">
       <div className="flex justify-between max-w-5xl mx-auto items-center">
         <div className="flex">
-          <Link to="/" className="mr-8">
+          <Link to="/" className="hidden md:block mr-8">
             <img src={LogoWide} alt="logo" className="max-w-[185px]" />
           </Link>
+          <Link to="/" className="md:hidden mr-8">
+            <img src={Logo} alt="logo" className="max-w-[75px]" />
+          </Link>
 
-          <ul className="flex space-x-8 text-[#1F9BE1] font-medium">
+          <ul className="hidden md:flex space-x-6 text-[#1F9BE1] font-medium">
             <li>Area Layanan</li>
             <li>Paket Produk</li>
             <li>Tentang Kami</li>
             <li>FAQ</li>
           </ul>
         </div>
-        <div className="flex space-x-4">
+        <div className="hidden md:flex space-x-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -176,6 +165,24 @@ function Header() {
             className="flex items-center text-white transition-all duration-300 hover:text-white bg-[#0B9DEF] hover:bg-[hsl(207,91%,49%)]"
           >
             Daftar Sekarang
+          </Button>
+        </div>
+        <div className="md:hidden">
+          <Button variant={"ghost"}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 stroke-cyan-800"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
           </Button>
         </div>
       </div>
