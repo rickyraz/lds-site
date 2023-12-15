@@ -16,13 +16,14 @@ function Hero() {
   return (
     <section className=" bg-[#FEFEFE] h-[445px]">
       <Swiper
-        rewind={true}
+        // rewind={true}
         slidesPerView={1}
         // slidesPerView={3}
         spaceBetween={55}
         // freeMode={true}
         centeredSlides={true}
         navigation={true}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

@@ -10,7 +10,7 @@ function QueryRouterApp() {
     <>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={routeClient} />
-        <ReactQueryDevtools initialIsOpen position="right" />
+        {/* <ReactQueryDevtools initialIsOpen position="right" /> */}
       </QueryClientProvider>
     </>
   );

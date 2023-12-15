@@ -1,12 +1,12 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/landingpage/Hero";
 
-import ChooseUs from "@/components/landingpage/ChooseUs";
-import Feature from "@/components/landingpage/Feature";
 import Interest from "@/components/landingpage/Interest";
 import Static from "@/components/landingpage/Static";
 import CoverageArea from "@/components/landingpage/CoverageArea";
 import Price from "@/components/landingpage/Price";
+import About from "@/components/landingpage/About";
+import FAQ from "@/components/landingpage/FAQ";
 
 export default function Landing() {
   return (
@@ -15,9 +15,8 @@ export default function Landing() {
       <CoverageArea />
       <Static />
       <Price />
-      {/* <Feature /> */}
-      {/* <ChooseUs /> */}
-      {/* <Interest /> */}
+      <About />
+      <FAQ />
     </Layout>
   );
 }

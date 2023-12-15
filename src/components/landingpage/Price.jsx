@@ -5,7 +5,6 @@ import { Wifi, Smartphone, CreditCard, Warehouse } from "lucide-react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./styles.css";
 
 // import required modules
@@ -14,11 +13,13 @@ import { Button } from "../ui/button";
 
 function Price() {
   return (
-    <div className="bg-[#F9FAFB]">
-      <div className="mx-5 py-8 space-y-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl font-extrabold md:text-center">Harga Paket</h2>
-          <p className="text-2xl font-bold md:text-4xl  md:mr-4 md:text-center md: mb-4">
+    <div className="bg-[#F9FAFB] mb-8">
+      <div className="ml-5 md:mx-0 py-12 md:pt-16 md:pb-20 ">
+        <div className="max-w-5xl mx-auto space-y-4">
+          <h2 className="text-xl font-extrabold md:text-center text-[#1070C8]">
+            Harga Paket
+          </h2>
+          <p className="text-2xl font-bold md:text-4xl md:mr-4 md:text-center md:pb-8">
             Pilih bandwith untuk bisnis dan keluargamu
           </p>
           <div className="hidden md:block">
@@ -31,9 +32,9 @@ function Price() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                <div className="border-2 border-slate-100 w-full text-base">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -43,7 +44,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-5 pb-5  rounded-xl bg-white">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}
@@ -82,9 +83,9 @@ function Price() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                <div className="border-2 border-slate-100 w-full text-base">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -94,7 +95,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-5 pb-5 bg-white rounded-xl">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}
@@ -133,9 +134,9 @@ function Price() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                <div className="border-2 border-slate-100 w-full text-base">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -145,7 +146,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-5 pb-5 bg-white rounded-xl">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}
@@ -196,8 +197,8 @@ function Price() {
             >
               <SwiperSlide>
                 <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -207,7 +208,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-3 pb-3 bg-white">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}
@@ -247,8 +248,8 @@ function Price() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -258,7 +259,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-3 pb-3 bg-white">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}
@@ -298,8 +299,8 @@ function Price() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="border-2 border-slate-100 w-full">
-                  <div className="bg-[#007BED]  py-4 px-5 rounded-xl">
-                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b-2">
+                  <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                    <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                       TurboNet 40Mbps{" "}
                     </h3>
                     <p className="pt-4 text-left text-[32px] font-bold">
@@ -309,7 +310,7 @@ function Price() {
                       Belum termasuk PPN 11%
                     </p>
                   </div>
-                  <div className="px-3 pb-3">
+                  <div className="px-3 pb-3 bg-white">
                     <Button
                       className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
                       variant={"default"}

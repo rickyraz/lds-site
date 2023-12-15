@@ -47,8 +47,8 @@ function CoverageArea() {
             <p className="text-sm">Cari daerahmu disini</p>
           </div>
         </div>
-        <div className="w-full min-h-[300px] md:w-1/2 bg-slate-100 mt-8 md:mt-0">
-          test
+        <div className="w-full min-h-[300px] md:w-1/2 bg-slate-300 mt-8 md:mt-0">
+          animasi map
         </div>
       </div>
     </section>
