@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Cart from "@/components/order/Cart";
 import CompanyProfile from "@/components/order/CompanyProfile";
+import { lazy, startTransition, useState } from "react";
 
 function Order() {
   const [currentStep, setCurrentStep] = useState(0);
