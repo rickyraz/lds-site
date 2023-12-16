@@ -63,7 +63,7 @@ function Header() {
             <img src={Logo} alt="logo" className="max-w-[75px]" />
           </Link>
 
-          <ul className="hidden md:flex space-x-6 text-[#1F9BE1] font-medium">
+          <ul className="hidden md:flex  ">
             <SmoothScroll>
               <a data-scroll-to="areaLayanan">Area Layanan</a>
               <a data-scroll-to="paketProduk">Paket Produk</a>
@@ -72,7 +72,7 @@ function Header() {
             </SmoothScroll>
           </ul>
         </div>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex md:space-x-6">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button

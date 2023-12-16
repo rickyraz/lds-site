@@ -15,13 +15,13 @@ const SmoothScroll = ({ children }) => {
   return (
     <div
       onClick={handleScroll}
-      className="md:flex md:space-x-6 space-y-6 md:space-y-0"
+      className=" text-[#1F9BE1] font-medium md:flex md:space-x-6 space-y-6 md:space-y-0"
     >
       {React.Children.map(children, (child) => (
         <motion.li
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="cursor-pointer	md:w-full"
+          className="cursor-pointer	w-full md:w-auto"
         >
           {child}
         </motion.li>
