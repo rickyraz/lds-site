@@ -4,6 +4,8 @@ import Root from "./RootRouterWrapper";
 import Dashboard from "@/pages/Dashboard/DashboardWrap";
 
 import Landing from "@/pages/LandingPage/app";
+import LoginPage from "@/pages/auth/Login";
+import Order from "@/pages/LandingPage/order/Order";
 
 // Root
 const rootRoute = new RootRoute({
@@ -24,18 +26,18 @@ const indexRoute: Route = new Route({
 //   component: PricingPage,
 // });
 
-// const orderPage = new Route({
-//   getParentRoute: () => rootRoute,
-//   path: "/order",
-//   component: Order,
-// });
+const orderPage = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/order",
+  component: Order,
+});
 
 // Login (login.tsx) route
-// const loginPage = new Route({
-//   getParentRoute: () => rootRoute,
-//   path: "/login",
-//   component: LoginPage,
-// });
+const loginPage = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/masuk",
+  component: LoginPage,
+});
 
 // Dashboard (dashboard.tsx) route - masuk ke dashboard
 const dashboardRoute = new Route({
@@ -45,7 +47,7 @@ const dashboardRoute = new Route({
 });
 
 // All Route - List of route
-const allRoute = [indexRoute, dashboardRoute];
+const allRoute = [indexRoute, dashboardRoute, loginPage, orderPage];
 
 // Create the Route-TREE for using all routes
 const routeTree = rootRoute.addChildren(allRoute);

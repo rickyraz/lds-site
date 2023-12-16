@@ -34,6 +34,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import SmoothScroll from "@/lib/smooth-scroll";
 
 function Header() {
   return (
@@ -47,11 +48,21 @@ function Header() {
             <img src={Logo} alt="logo" className="max-w-[75px]" />
           </Link>
 
+          {/* <ul className="hidden md:flex space-x-6 text-[#1F9BE1] font-medium">
+            <SmoothScroll>
+              <li>Area Layanan</li>
+              <li>Paket Produk</li>
+              <li>Tentang Kami</li>
+              <li>FAQ</li>
+            </SmoothScroll>
+          </ul> */}
           <ul className="hidden md:flex space-x-6 text-[#1F9BE1] font-medium">
-            <li>Area Layanan</li>
-            <li>Paket Produk</li>
-            <li>Tentang Kami</li>
-            <li>FAQ</li>
+            <SmoothScroll>
+              <a data-scroll-to="areaLayanan">Area Layanan</a>
+              <a data-scroll-to="paketProduk">Paket Produk</a>
+              <a data-scroll-to="tentangKami">Tentang Kami</a>
+              <a data-scroll-to="faq">FAQ</a>
+            </SmoothScroll>
           </ul>
         </div>
         <div className="hidden md:flex space-x-4">
@@ -84,12 +95,16 @@ function Header() {
               <DropdownMenuGroup>
                 <DropdownMenuItem>
                   {/* <CircleUserRound className="mr-2 h-4 w-4" /> */}
-                  <span>Klien Area</span>
+                  <Link to="/masuk">
+                    <span>Client Area</span>
+                  </Link>
                   {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   {/* <CreditCard className="mr-2 h-4 w-4" /> */}
-                  <span>Admin</span>
+                  <a href="http://lds.zenradius.id" target="_blank">
+                    <span>Admin</span>
+                  </a>
                   {/* <DropdownMenuShortcut>⌘B</DropdownMenuShortcut> */}
                 </DropdownMenuItem>
                 {/* <DropdownMenuItem>

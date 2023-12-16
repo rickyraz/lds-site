@@ -2,11 +2,10 @@ import React from "react";
 
 function FAQ() {
   return (
-    <div>
+    <section id="faq">
       <div class="max-w-5xl mx-auto px-5 pb-14">
         <div class="flex flex-col items-center">
           <h2 className="text-xl font-extrabold  text-[#1070C8]">
-            {" "}
             Frequenty asked questions
           </h2>
           <p className="text-2xl font-bold md:text-4xl md:mr-4  ">FAQ</p>
@@ -181,7 +180,7 @@ function FAQ() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

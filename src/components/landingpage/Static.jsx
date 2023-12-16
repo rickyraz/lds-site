@@ -11,12 +11,14 @@ function Static() {
         <div class="text-center space-y-2 py-6 bg-[#F9FAFB]">
           <div class="text-3xl font-bold">4</div>
           <div class="text-sm font-semibold text-[#1070C8]">
-            Titik Di Ibukota
+            Titik Di Jakarta
           </div>
         </div>
         <div class="text-center space-y-2 py-6 bg-[#F9FAFB]">
           <div class="text-3xl font-bold">200 K</div>
-          <div class="text-sm font-semibold text-[#1070C8]">Mulai Dari</div>
+          <div class="text-sm font-semibold text-[#1070C8]">
+            Harga Terjangkau
+          </div>
         </div>
       </div>
     </section>

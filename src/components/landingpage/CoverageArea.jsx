@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 
 function CoverageArea() {
   return (
-    <section>
+    <section id="areaLayanan">
       <div className="mx-5 md:hidden mt-8">
         <div className="flex items-center space-x-5 border-2  rounded-sm">
           {/* Search Button */}
@@ -24,17 +24,17 @@ function CoverageArea() {
           </p>
           <div className="grid grid-cols-3 md:mr-8">
             <div>
-              <h3 className="font-semibold text-[32px] text-[#2F76FA]">100%</h3>
+              <h3 className="font-semibold text-[32px] text-[#0274DD]">100%</h3>
               <p className="font-medium">Fiber Optic</p>
             </div>
             <div>
-              <h3 className="font-semibold text-[32px] text-[#2F76FA]">
+              <h3 className="font-semibold text-[32px] text-[#0274DD]">
                 1 : 1
               </h3>
               <p className="font-medium">Simetris Download : Upload</p>
             </div>
             <div>
-              <h3 className="font-semibold text-[32px] text-[#2F76FA]">100%</h3>
+              <h3 className="font-semibold text-[32px] text-[#0274DD]">100%</h3>
               <p className="font-medium">Internet UNLIMITED</p>
             </div>
           </div>
