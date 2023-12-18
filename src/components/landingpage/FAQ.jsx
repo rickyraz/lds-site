@@ -4,9 +4,9 @@ function FAQ() {
   return (
     <section id="faq">
       <div class="max-w-5xl mx-auto px-5 pb-14">
-        <div class="flex flex-col items-center">
-          <h2 className="text-xl font-extrabold  text-[#1070C8]">
-            Frequenty asked questions
+        <div class="flex flex-col md:items-center">
+          <h2 className="text-xl font-extrabold  md:text-center  text-[#1070C8]">
+            Frequenty Asked Questions
           </h2>
           <p className="text-2xl font-bold md:text-4xl md:mr-4  ">FAQ</p>
         </div>
