@@ -39,64 +39,6 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                 modules={[Pagination]}
                 className="mySwiper"
               >
-                {/* {data &&
-                  data.map((data: any, index: any) => {
-                    <SwiperSlide>
-                      <div className="border-2 border-slate-100 w-full text-base">
-                        <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
-                          <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
-                            TurboNet 40Mbps{" "}
-                          </h3>
-                          <p className="pt-4 text-left text-[32px] font-bold">
-                            Rp.345.000
-                          </p>
-                          <p className="pt-4 text-left text-base  text-white">
-                            Belum termasuk PPN 11%
-                          </p>
-                        </div>
-                        <div className="px-5 pb-5  rounded-xl bg-white">
-                          <Link to="/order">
-                            <Button
-                              className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                              variant={"default"}
-                            >
-                              Langganan Sekarang
-                            </Button>
-                          </Link>
-                          <Button
-                            className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
-                            variant={"default"}
-                          >
-                            Chat Admin
-                          </Button>
-                          <div className="mt-6">
-                            <h3 className="text-left font-bold text-lg ">
-                              FITUR
-                            </h3>
-                            <ul className="text-left space-y-2">
-                              <li className="space-x-2 flex">
-                                <Wifi />
-                                <span>Internet UNLIMITED</span>
-                              </li>
-                              <li className="space-x-2 flex">
-                                <Smartphone />
-                                <span> Ideal untuk 10 - 14 Device</span>
-                              </li>
-                              <li className="space-x-2 flex">
-                                <CreditCard />
-                                <span>Dukungan Prioritas 24/7</span>
-                              </li>
-
-                              <li className="space-x-2 flex">
-                                <Warehouse />
-                                <span>Gratis Instalasi</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>;
-                  })} */}
                 {data &&
                   data.map(
                     (
@@ -176,62 +118,153 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                       </SwiperSlide>
                     )
                   )}
-                <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full text-base">
-                    <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
-                      <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
-                        TurboNet 40Mbps{" "}
-                      </h3>
-                      <p className="pt-4 text-left text-[32px] font-bold">
-                        Rp.345.000
-                      </p>
-                      <p className="pt-4 text-left text-base  text-white">
-                        Belum termasuk PPN 11%
-                      </p>
-                    </div>
-                    <div className="px-5 pb-5  rounded-xl bg-white">
-                      <Link to="/order">
-                        <Button
-                          className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                          variant={"default"}
-                        >
-                          Langganan Sekarang
-                        </Button>
-                      </Link>
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
-                        variant={"default"}
-                      >
-                        Chat Admin
-                      </Button>
-                      <div className="mt-6">
-                        <h3 className="text-left font-bold text-lg ">FITUR</h3>
-                        <ul className="text-left space-y-2">
-                          <li className="space-x-2 flex">
-                            <Wifi />
-                            <span>Internet UNLIMITED</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <Smartphone />
-                            <span> Ideal untuk 10 - 14 Device</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <CreditCard />
-                            <span>Dukungan Prioritas 24/7</span>
-                          </li>
+              </Swiper>
+            </div>
+            <div className="md:hidden">
+              <Swiper
+                slidesPerView={1.125}
+                spaceBetween={20}
+                grabCursor={true}
+                pagination={false}
+                modules={[Pagination]}
+                className="mySwiper"
+              >
+                {data &&
+                  data.map(
+                    (
+                      item: {
+                        [x: string]: any;
+                        id: React.Key | null | undefined;
+                        display_name:
+                          | string
+                          | number
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | null
+                          | undefined;
+                      },
+                      index: any
+                    ) => (
+                      // <SwiperSlide key={item.id}>
+                      //   <div className="border-2 border-slate-100 w-full text-base">
+                      //     <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                      //       <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20">
+                      //         {item.default_code}
+                      //       </h3>
+                      //       <p className="pt-4 text-left text-[32px] font-bold">
+                      //         {`Rp.${item.list_price}`}{" "}
+                      //         {/* Assuming you have a price field */}
+                      //       </p>
+                      //       <p className="pt-4 text-left text-base  text-white">
+                      //         Belum termasuk PPN 11%
+                      //       </p>
+                      //     </div>
+                      //     <div className="px-5 pb-5  rounded-xl bg-white">
+                      //       <Link to="/order">
+                      //         <Button
+                      //           className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
+                      //           variant={"default"}
+                      //         >
+                      //           Langganan Sekarang
+                      //         </Button>
+                      //       </Link>
+                      //       <Button
+                      //         className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
+                      //         variant={"default"}
+                      //       >
+                      //         Chat Admin
+                      //       </Button>
+                      //       <div className="mt-6">
+                      //         <h3 className="text-left font-bold text-lg ">
+                      //           FITUR
+                      //         </h3>
+                      //         <ul className="text-left space-y-2">
+                      //           <li className="space-x-2 flex">
+                      //             <Wifi />
+                      //             <span>Internet UNLIMITED</span>
+                      //           </li>
+                      //           <li className="space-x-2 flex">
+                      //             <Smartphone />
+                      //             <span> Ideal untuk 10 - 14 Device</span>
+                      //           </li>
+                      //           <li className="space-x-2 flex">
+                      //             <CreditCard />
+                      //             <span>Dukungan Prioritas 24/7</span>
+                      //           </li>
 
-                          <li className="space-x-2 flex">
-                            <Warehouse />
-                            <span>Gratis Instalasi</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                      //           <li className="space-x-2 flex">
+                      //             <Warehouse />
+                      //             <span>Gratis Instalasi</span>
+                      //           </li>
+                      //         </ul>
+                      //       </div>
+                      //     </div>
+                      //   </div>
+                      // </SwiperSlide>
+                      <SwiperSlide key={item.id}>
+                        <div className="border-2 border-slate-100 w-full">
+                          <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
+                            <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
+                              {item.default_code}
+                            </h3>
+                            <p className="pt-4 text-left text-[32px] font-bold">
+                              {`Rp.${item.list_price}`}{" "}
+                              {/* Assuming you have a price field */}
+                            </p>
+                            <p className="pt-4 text-left text-base  text-white">
+                              Belum termasuk PPN 11%
+                            </p>
+                          </div>
+                          <div className="px-3 pb-3 bg-white">
+                            <Button
+                              className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
+                              variant={"default"}
+                            >
+                              Langganan Sekarang
+                            </Button>
+                            <Button
+                              className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
+                              variant={"default"}
+                            >
+                              Chat Admin
+                            </Button>
+                            <div className="mt-6">
+                              <h3 className="text-left font-bold text-lg ">
+                                FITUR
+                              </h3>
+                              <ul className="text-left space-y-2">
+                                <li className="space-x-2 flex">
+                                  <Wifi />
+                                  <span>Internet UNLIMITED</span>
+                                </li>
+                                <li className="space-x-2 flex">
+                                  <Smartphone />
+                                  <span> Ideal untuk 10 - 14 Device</span>
+                                </li>
+                                <li className="space-x-2 flex">
+                                  <CreditCard />
+                                  <span>Dukungan Prioritas 24/7</span>
+                                </li>
+
+                                <li className="space-x-2 flex">
+                                  <Warehouse />
+                                  <span>Gratis Instalasi</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  )}
 
                 {/* <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full text-base">
+                  <div className="border-2 border-slate-100 w-full">
                     <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
                       <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                         TurboNet 40Mbps{" "}
@@ -243,15 +276,13 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                         Belum termasuk PPN 11%
                       </p>
                     </div>
-                    <div className="px-5 pb-5 bg-white rounded-xl">
-                      <Link to="/order">
-                        <Button
-                          className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                          variant={"default"}
-                        >
-                          Langganan Sekarang
-                        </Button>
-                      </Link>
+                    <div className="px-3 pb-3 bg-white">
+                      <Button
+                        className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
+                        variant={"default"}
+                      >
+                        Langganan Sekarang
+                      </Button>
                       <Button
                         className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
                         variant={"default"}
@@ -284,7 +315,7 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full text-base">
+                  <div className="border-2 border-slate-100 w-full">
                     <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
                       <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
                         TurboNet 40Mbps{" "}
@@ -296,15 +327,13 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                         Belum termasuk PPN 11%
                       </p>
                     </div>
-                    <div className="px-5 pb-5 bg-white rounded-xl">
-                      <Link to="/order">
-                        <Button
-                          className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                          variant={"default"}
-                        >
-                          Langganan Sekarang
-                        </Button>
-                      </Link>
+                    <div className="px-3 pb-3 bg-white">
+                      <Button
+                        className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
+                        variant={"default"}
+                      >
+                        Langganan Sekarang
+                      </Button>
                       <Button
                         className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
                         variant={"default"}
@@ -336,170 +365,6 @@ const Price: React.FC<ComponentProps> = ({ data }) => {
                     </div>
                   </div>
                 </SwiperSlide> */}
-              </Swiper>
-            </div>
-            <div className="md:hidden">
-              <Swiper
-                slidesPerView={1.125}
-                spaceBetween={20}
-                grabCursor={true}
-                pagination={false}
-                modules={[Pagination]}
-                className="mySwiper"
-              >
-                <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full">
-                    <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
-                      <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
-                        TurboNet 40Mbps{" "}
-                      </h3>
-                      <p className="pt-4 text-left text-[32px] font-bold">
-                        Rp.345.000
-                      </p>
-                      <p className="pt-4 text-left text-base  text-white">
-                        Belum termasuk PPN 11%
-                      </p>
-                    </div>
-                    <div className="px-3 pb-3 bg-white">
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                        variant={"default"}
-                      >
-                        Langganan Sekarang
-                      </Button>
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
-                        variant={"default"}
-                      >
-                        Chat Admin
-                      </Button>
-                      <div className="mt-6">
-                        <h3 className="text-left font-bold text-lg ">FITUR</h3>
-                        <ul className="text-left space-y-2">
-                          <li className="space-x-2 flex">
-                            <Wifi />
-                            <span>Internet UNLIMITED</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <Smartphone />
-                            <span> Ideal untuk 10 - 14 Device</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <CreditCard />
-                            <span>Dukungan Prioritas 24/7</span>
-                          </li>
-
-                          <li className="space-x-2 flex">
-                            <Warehouse />
-                            <span>Gratis Instalasi</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full">
-                    <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
-                      <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
-                        TurboNet 40Mbps{" "}
-                      </h3>
-                      <p className="pt-4 text-left text-[32px] font-bold">
-                        Rp.345.000
-                      </p>
-                      <p className="pt-4 text-left text-base  text-white">
-                        Belum termasuk PPN 11%
-                      </p>
-                    </div>
-                    <div className="px-3 pb-3 bg-white">
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                        variant={"default"}
-                      >
-                        Langganan Sekarang
-                      </Button>
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
-                        variant={"default"}
-                      >
-                        Chat Admin
-                      </Button>
-                      <div className="mt-6">
-                        <h3 className="text-left font-bold text-lg ">FITUR</h3>
-                        <ul className="text-left space-y-2">
-                          <li className="space-x-2 flex">
-                            <Wifi />
-                            <span>Internet UNLIMITED</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <Smartphone />
-                            <span> Ideal untuk 10 - 14 Device</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <CreditCard />
-                            <span>Dukungan Prioritas 24/7</span>
-                          </li>
-
-                          <li className="space-x-2 flex">
-                            <Warehouse />
-                            <span>Gratis Instalasi</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="border-2 border-slate-100 w-full">
-                    <div className="bg-[#007BED]  py-8 px-5 rounded-xl">
-                      <h3 className="text-white text-left text-2xl font-bold pb-4 border-b border-[#fff]/20 ">
-                        TurboNet 40Mbps{" "}
-                      </h3>
-                      <p className="pt-4 text-left text-[32px] font-bold">
-                        Rp.345.000
-                      </p>
-                      <p className="pt-4 text-left text-base  text-white">
-                        Belum termasuk PPN 11%
-                      </p>
-                    </div>
-                    <div className="px-3 pb-3 bg-white">
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-[#000D26] text-white"
-                        variant={"default"}
-                      >
-                        Langganan Sekarang
-                      </Button>
-                      <Button
-                        className="w-full text-lg py-6 mt-3 bg-white border text-[#000D26] border-[#000D26] "
-                        variant={"default"}
-                      >
-                        Chat Admin
-                      </Button>
-                      <div className="mt-6">
-                        <h3 className="text-left font-bold text-lg ">FITUR</h3>
-                        <ul className="text-left space-y-2">
-                          <li className="space-x-2 flex">
-                            <Wifi />
-                            <span>Internet UNLIMITED</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <Smartphone />
-                            <span> Ideal untuk 10 - 14 Device</span>
-                          </li>
-                          <li className="space-x-2 flex">
-                            <CreditCard />
-                            <span>Dukungan Prioritas 24/7</span>
-                          </li>
-
-                          <li className="space-x-2 flex">
-                            <Warehouse />
-                            <span>Gratis Instalasi</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
               </Swiper>
             </div>
           </div>
