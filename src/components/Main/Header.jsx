@@ -100,20 +100,20 @@ function Header() {
               {/* <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator /> */}
               <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  {/* <CircleUserRound className="mr-2 h-4 w-4" /> */}
-                  <Link to="/masuk">
+                <Link to="/masuk">
+                  <DropdownMenuItem>
+                    {/* <CircleUserRound className="mr-2 h-4 w-4" /> */}
                     <span>Client Area</span>
-                  </Link>
-                  {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {/* <CreditCard className="mr-2 h-4 w-4" /> */}
-                  <a href="http://lds.zenradius.id" target="_blank">
+                    {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
+                  </DropdownMenuItem>
+                </Link>
+                <a href="http://lds.zenradius.id" target="_blank">
+                  <DropdownMenuItem>
+                    {/* <CreditCard className="mr-2 h-4 w-4" /> */}
                     <span>Admin</span>
-                  </a>
-                  {/* <DropdownMenuShortcut>⌘B</DropdownMenuShortcut> */}
-                </DropdownMenuItem>
+                    {/* <DropdownMenuShortcut>⌘B</DropdownMenuShortcut> */}
+                  </DropdownMenuItem>
+                </a>
                 {/* <DropdownMenuItem>
                   <Settings className="mr-2 h-4 w-4" />
                   <span>Settings</span>
