@@ -1,7 +1,9 @@
-import { stepTwoSchema } from "@/lib/validation/yup";
-import useFormStore from "@/store/useFormStore";
+import { stepTwoSchema } from "./yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import useFormStore from "@/store/useFormStore";
 import { FormProvider, useForm } from "react-hook-form";
+import PasswordInput from "../Form/PasswordInput";
+import Input from "../Form/Input";
 
 const UserProfile = () => {
   const { setData, stepTwo } = useFormStore();

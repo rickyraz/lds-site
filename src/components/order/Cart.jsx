@@ -1,16 +1,62 @@
 import { useAddItem, useCart } from "@/store/useCart";
-import { Link } from "@tanstack/react-router";
-import { Router, useNavigate } from "@tanstack/react-router";
+import useFormStore from "@/store/useFormStore";
+import { Router, useNavigate, Link } from "@tanstack/react-router";
+
+import Loader from "@/components/Loader";
 import { useQuery } from "@tanstack/react-query";
+import { getProductPublic } from "@/components/order/config_public";
+import { filter } from "lodash";
+
+import { Suspense, useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
 
 function Cart() {
-  const selectedProduct = useCart((state) => state.products);
+  const { register, handleSubmit, watch, errors, setValue } = useForm(); // Tambahkan inisialisasi useForm
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProductTotalPrice, setSelectedProductTotalPrice] = useState(0); // Tambahkan state ini
+  const [isProductSelected, setIsProductSelected] = useState(false);
 
-  console.log("product yang di select", selectedProduct);
-  console.log("IDproduk", selectedProduct[0]);
+  // const selectedProduct = useCart((state) => state.products);
+
+  // console.log("product yang di select", selectedProduct);
+  // console.log("IDproduk", selectedProduct[0]);
 
   // const product = useAddItem((state) => state.product);
   // console.log("jumlah product", product);
+
+  console.log(
+    `default.code and totall harga`,
+    selectedProduct?.default_code || "",
+    selectedProductTotalPrice
+  );
+
+  const [selectedProductId, setSelectedProductId] = useState("");
+
+  const {
+    isLoading,
+    error,
+    data: publicProduct,
+
+    isSuccess,
+  } = useQuery({
+    queryKey: ["publicProduct"],
+    queryFn: () => getProductPublic(),
+  });
+
+  if (isLoading) return <Loader />;
+
+  if (error) return "An error has occurred: " + error.message;
+
+  const dataProduct = publicProduct?.data?.product_param_data || [];
+
+  const targetIds = [39, 42, 43];
+  const filteredData = filter(dataProduct, (obj) => {
+    return targetIds.includes(obj.id);
+  });
+
+  console.log("dataProduct", dataProduct);
+  console.log("publicProduct", publicProduct);
+  console.log("filteredData", filteredData);
 
   return (
     <div>
@@ -28,29 +74,34 @@ function Cart() {
 
                     <div className="flex justify-between  mt-6 pt-6">
                       <div className="flex  items-center">
-                        {/* <img
-                          src="https://i.imgur.com/EEguU02.jpg"
-                          width="60"
-                          className="rounded-full "
-                        /> */}
-
                         <div className="flex flex-col ">
-                          <select value={selectedProduct[0]}>
+                          {/* <select value={selectedProduct[0]}>
                             <option value="1">Personal Plan</option>
                             <option value="2">Business Plan</option>
                             <option value="3">Enterprise Plan</option>
+                          </select> */}
+                          <select
+                            name="default_code"
+                            value={selectedProductId}
+                            onChange={(e) => handleProductChange(e)}
+                            className="block w-full py-3 px-3 mb-6 text-sm text-blue-800 bg-slate-50  rounded-md border-2 border-blue-500 font-medium focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                          >
+                            <option value="">Choose Your Plan</option>
+                            {filteredData.map((product) => {
+                              const displayName = product.display_name
+                                .replace(/\[.*?\]/, "")
+                                .trim();
+                              return (
+                                <option key={product.id} value={product.id}>
+                                  {displayName}
+                                </option>
+                              );
+                            })}
                           </select>
-                          {/* <span className="md:text-md font-medium">
-                            {selectedProduct?.name}
-                          </span> */}
-                          {/* <span className="text-xs font-light text-gray-400">
-                            #41551
-                          </span> */}
                         </div>
                       </div>
 
                       <div className="flex-col justify-end items-end text-end text-xs">
-                        {/* <span className=" font-medium">RP.210.000</span> */}
                         <span className=" font-medium">
                           {selectedProduct?.price}
                         </span>

@@ -18,6 +18,9 @@ const config = {
     extend: {
       fontFamily: {
         axiforma: ["Axiforma", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        rubik_mono_one: ["Rubik Mono One", "sans-serif"],
       },
     },
   },
