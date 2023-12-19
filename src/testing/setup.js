@@ -3,9 +3,9 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
 import { afterEach, expect } from "vitest";
 
-expect.extend(matchers);
+expect(true).toBe(true);
 
 // runs a cleanup after each test case (e.g. clearing jsdom)
 afterEach(() => {
-	cleanup();
+  cleanup();
 });

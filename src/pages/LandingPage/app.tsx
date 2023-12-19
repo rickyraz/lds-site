@@ -39,7 +39,7 @@ export default function Landing() {
   return (
     <Layout>
       <Hero />
-      <CoverageArea />
+      {/* <CoverageArea /> */}
       <Static />
       <Price data={filteredData} />
       <About />
